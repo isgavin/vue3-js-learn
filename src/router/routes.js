@@ -12,7 +12,11 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (About.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: AboutView,
+    component: AboutView
+  },
+  {
+    path: '/data',
+    component: () => import('../views/DataCom.vue'),
     props: {
       user: {
         id: 1,
