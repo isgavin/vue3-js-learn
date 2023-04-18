@@ -6,9 +6,7 @@ import VueLife from '../components/VueBase/VueLife.vue';
 
 <template>
   <div class="about">
-
-    <el-divider></el-divider>
-    <h2>This is an about page</h2>
+    <h3>这里是 vue 基础</h3>
     <DataBind />
     <el-divider></el-divider>
     <VueLife />

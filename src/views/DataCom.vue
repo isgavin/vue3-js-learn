@@ -1,7 +1,7 @@
 <script setup>
 import Pinia from '../components/Com/Pinia.vue';
 
-import VueProps from '../components/VueBase/VueProps.vue';
+import VueProps from '../components/Com/VueProps.vue';
 // 向子组件传递 props
 const Person = [
   { id: 1, name: '张三', age: 18 },
@@ -26,6 +26,7 @@ const { user } = defineProps({
 <template>
   <div>
     <h3>vue3 组件间的通信方式</h3>
+    <el-divider></el-divider>
     <Pinia />
     <div class="router">
       <h3>路由表传的 Props</h3>

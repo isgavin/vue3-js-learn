@@ -7,6 +7,7 @@ import Todos from '../components/Function/Todos.vue';
 <template>
   <main>
     <h3>这是首页</h3>
+    <el-divider></el-divider>
     <Marked />
     <Todos />
 

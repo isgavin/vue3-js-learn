@@ -9,10 +9,8 @@ const { Person } = defineProps({
 </script>
 
 <template>
-  <div>
-    <h3>数据传参 Props</h3>
-    接收 About 传来的数据
-
+  <div class="props">
+    <h3>数据传参 Props，接收父组件传来的数据</h3>
     <ul>
       <li v-for="item in Person" :key="item.id">
         {{ item.name }} {{ item.age }}
@@ -21,4 +19,8 @@ const { Person } = defineProps({
   </div>
 </template >
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.props {
+  background-color: beige;
+}
+</style>

@@ -9,12 +9,10 @@ const { increment } = store
 
 let Timer = setInterval(() => {
   increment()
-  console.log("方法已经调用!!!")
 }, 1000)
 
 onBeforeUnmount(() => {
   clearInterval(Timer)
-  console.log('组件销毁了')
 })
 </script>
 

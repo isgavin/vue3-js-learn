@@ -12,7 +12,6 @@ Timer = setInterval(() => {
 
 onBeforeUnmount(() => {
   clearInterval(Timer)
-  console.log('组件销毁了')
 })
 
 
