@@ -6,6 +6,14 @@ const { Person } = defineProps({
     default: []
   }
 })
+
+// mitt 传输数据
+import {PubSub} from 'pubsub-js';
+const mittData = {
+  name: 'Mitt',
+  msg: '这是第一次使用 mitt'
+}
+PubSub.publish('foo', mittData);
 </script>
 
 <template>

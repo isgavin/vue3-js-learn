@@ -18,9 +18,7 @@ const { user } = defineProps({
   }
 })
 
-
-
-
+import Pubsub from '../components/Com/Pubsub.vue';
 </script>
 
 <template>
@@ -36,8 +34,8 @@ const { user } = defineProps({
       </ul>
     </div>
     <VueProps :Person="Person" />
-
-
+    <el-divider></el-divider>
+    <Pubsub />
   </div>
 </template>
 
