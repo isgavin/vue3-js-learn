@@ -8,16 +8,15 @@ function handleAdd() {
   Count.value++;
 }
 //监听数据改变
-watchEffect(() => {
-  console.log('Count', Count.value)
-})
+// watchEffect(() => {
+
+// })
 const inputVal = ref('开始');
 
 </script>
 
 <template>
   <div>
-
     <el-divider></el-divider>
     <h3>数据绑定</h3>
     <span>单向数据绑定：Count: {{ Count }}</span>

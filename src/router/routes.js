@@ -25,6 +25,18 @@ const routes = [
         email: '123456@qq.com'
       }
     }
+  },
+  {
+    path: '/router',
+    component: () => import('../views/RouterData.vue'),
+    props: {
+      user: {
+        id: 1,
+        name: 'Gavin',
+        age: 30,
+        email: '123456@qq.com'
+      }
+    }
   }
 ]
 

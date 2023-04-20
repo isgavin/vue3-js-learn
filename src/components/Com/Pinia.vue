@@ -3,7 +3,9 @@ import { ref, onBeforeUnmount } from 'vue';
 // pinia使用
 import { storeToRefs } from 'pinia';
 import { useCounterStore } from '@/stores/count';
-const store = useCounterStore() // store 实例化
+// store 实例化
+const store = useCounterStore()
+// 将 pinia 数据响应式处理
 const { count, doubleVal } = storeToRefs(store)
 const { increment } = store
 
@@ -27,6 +29,6 @@ onBeforeUnmount(() => {
 
 <style lang="scss" scoped>
 .pinia {
-  background-color: rgb(146, 194, 236) ;
+  background-color: rgb(146, 194, 236);
 }
 </style>
