@@ -8,11 +8,13 @@ const { Person } = defineProps({
 })
 
 // 发布
-import { PubSub } from 'pubsub-js';
-PubSub.publish('foo', {
-  name: 'Mitt',
-  msg: '这是第一次使用 mitt'
-});
+const Car = {
+  name: 'BMW',
+  history: 100
+}
+import PubSub from 'pubsub-js';
+PubSub.publish('MY TOPIC', Car);
+
 </script>
 
 <template>

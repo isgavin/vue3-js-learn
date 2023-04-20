@@ -1,7 +1,7 @@
 <script setup>Props
 import Pinia from '../components/Com/Pinia.vue';
-
 import Props from '../components/Com/Props.vue';
+import Pubsub from '../components/Com/Pubsub.vue';
 // 向子组件传递 props
 const Person = [
   { id: 1, name: '张三', age: 18 },

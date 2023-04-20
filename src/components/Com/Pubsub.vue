@@ -1,18 +1,17 @@
 <script setup>
-// 有两个组件 VueProps 和 Pubsub
+// 有两个组件 Props 和 Pubsub
 import { onBeforeUnmount } from 'vue';
-import { PubSub } from 'pubsub-js'
+import PubSub from 'pubsub-js'
 import { ref } from 'vue';
 
 // 订阅
-let token = PubSub.subscribe('foo', (msg, data) => {
-  console.log('这是数据Person', msg);
-  console.log('这是数据Person', data);
-});
-// 接收数据并响应式处理
-const Data = ref({})
+var mySubscriber = function (msg, data) {
+  console.log(msg, data)
+  // return ref(data)
+};
 
-// 取消所有订阅
+var token = PubSub.subscribe('MY TOPIC', mySubscriber);
+
 onBeforeUnmount(() => {
   PubSub.unsubscribe(token);
 })
@@ -23,8 +22,7 @@ onBeforeUnmount(() => {
   <div class="pubsub">
     <h3>Pubsub：这是从 Props 收到的数据</h3>
     <ul>
-      <li>name: {{ Data.name }}</li>
-      <li>msg: {{ Data.msg }}</li>
+      <!-- {{mySubscriber}} -->
     </ul>
   </div>
 </template>
