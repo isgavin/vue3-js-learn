@@ -34,7 +34,10 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   response => {
     const code = response.data.code || 200 // 获取服务器响应的数据中的状态码
-    if (code === 200) return response.data.data //状态码200 直接返回数据
+    //状态码200 直接返回数据
+    if (code === 200) {
+      return response.data.data
+    }
 
     // 这个 errorCode 对象是自己定义的，用来存储错误码和错误信息的对应关系
     const msg = errorCode.get(code)

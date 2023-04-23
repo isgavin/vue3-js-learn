@@ -3,7 +3,7 @@ import request from './request.js'
 // 测试
 
 export const test = () => {
-  request({ url: `/api/pet/2`, method: 'get' })
+  return request({ url: `/api/user/test`, method: 'get' })
 }
 
 // 登录

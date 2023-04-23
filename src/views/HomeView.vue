@@ -8,7 +8,7 @@ import Name from '../components/Function/Name.vue';
 
 <template>
   <main>
-    <h3>这是首页</h3>
+    <h3>这是首页，写一些有趣的组件</h3>
     <el-divider></el-divider>
     <Marked />
     <el-divider></el-divider>
