@@ -1,20 +1,9 @@
 <script setup>
 import { defineProps } from 'vue';
-const { Person } = defineProps({
-  Person: {
-    type: Array,
-    default: []
-  }
+
+defineProps({
+  Person: Array
 })
-
-// 发布
-const Car = {
-  name: 'BMW',
-  history: 100
-}
-import PubSub from 'pubsub-js';
-PubSub.publish('MY TOPIC', Car);
-
 </script>
 
 <template>

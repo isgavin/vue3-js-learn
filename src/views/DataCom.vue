@@ -1,14 +1,10 @@
-<script setup>Props
-import Pinia from '../components/Com/Pinia.vue';
-import Props from '../components/Com/Props.vue';
-import Pubsub from '../components/Com/Pubsub.vue';
-// 向子组件传递 props
-const Person = [
-  { id: 1, name: '张三', age: 18 },
-  { id: 2, name: '李四', age: 19 },
-  { id: 3, name: '王五', age: 20 }
-]
+<script setup>
 
+import Pinia from '../components/Com/Pinia.vue';
+import Props from '../components/Com/1Props/Father.vue';
+import Func from '../components/Com/2CustomFuc/Father.vue';
+import Mitt from '../components/Com/3Mitt/Father.vue';
+import Vmodel from '../components/Com/4Vmodel/Father.vue';
 
 </script>
 
@@ -16,16 +12,22 @@ const Person = [
   <div>
     <h3>vue3 组件间的通信方式</h3>
     <el-divider></el-divider>
+    <Props />
+    <el-divider></el-divider>
+    <Func />
+    <el-divider></el-divider>
+    <Mitt />
+    <el-divider></el-divider>
+    <Vmodel/>
+    <el-divider></el-divider>
     <Pinia />
 
-    <Props :Person="Person" />
+
     <el-divider></el-divider>
-    <Pubsub />
+ 
   </div>
 </template>
 
 
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
